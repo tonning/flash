@@ -43,6 +43,8 @@ use Tonning\Flash\Flash;
 
 Flash::info('A new software update is available. See what’s new in version 2.0.4.');
 ```
+<img width="778" alt="flash_info" src="https://user-images.githubusercontent.com/7304678/137721035-07139c6b-d096-457d-8f4e-b0c1b5c8b2df.png">
+
 
 ### Displaying notifications
 
@@ -60,6 +62,8 @@ use Tonning\Flash\Flash;
 
 Flash::warning('Please confirm your email address.', 'Attention needed');
 ```
+<img width="789" alt="flash_warning_single" src="https://user-images.githubusercontent.com/7304678/137721066-4bde8269-504c-4731-af9d-ed42028bf6f6.png">
+
 
 ### Grouping
 Notifications of the same type will be grouped in an unordered list.
@@ -71,6 +75,8 @@ Flash::warning('Facilisis himenaeos nullam habitasse lacus sem auctor.');
 Flash::warning('Please confirm your email address.', 'Attention needed');
 Flash::warning('Facilisis egestas fermentum porttitor sapien eleifend amet.');
 ```
+<img width="779" alt="flash_warning_multiple_grouped" src="https://user-images.githubusercontent.com/7304678/137721115-3f25b870-54be-40a8-a959-1b19c67eabe1.png">
+
 
 ### Errors
 This package will by default also display any validation errors.
@@ -78,6 +84,8 @@ This package will by default also display any validation errors.
 ```php
 throw ValidationException::withMessages(['Something went wrong.']);
 ```
+<img width="777" alt="flash_error" src="https://user-images.githubusercontent.com/7304678/137721137-cab37f89-7c02-4a5a-8f62-ebdc5a1c93e9.png">
+
 
 This can be turned of in the config file.
 

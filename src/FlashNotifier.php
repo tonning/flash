@@ -9,7 +9,7 @@ class FlashNotifier
 {
     protected Collection $messages;
 
-    function __construct(protected SessionStore $session)
+    public function __construct(protected SessionStore $session)
     {
         $this->messages = collect();
     }
@@ -66,7 +66,7 @@ class FlashNotifier
         return view('flash::messages');
     }
 
-    public function __toString() : string
+    public function __toString(): string
     {
         return new HtmlString($this->render());
     }

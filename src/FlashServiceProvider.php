@@ -5,7 +5,6 @@ namespace Tonning\Flash;
 use Illuminate\Support\Facades\Blade;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Tonning\Flash\View\Components\Warning;
 
 class FlashServiceProvider extends PackageServiceProvider
 {

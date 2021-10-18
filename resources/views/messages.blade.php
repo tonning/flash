@@ -17,4 +17,4 @@
     @endforeach
 </div>
 
-{{ session()->forget('flash_notification') }}
+{{ session()->forget('tonning.flash.notifications') }}

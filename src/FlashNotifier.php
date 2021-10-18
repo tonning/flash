@@ -51,7 +51,7 @@ class FlashNotifier
 
     public function hasAny(): bool
     {
-        return count($this->messages) > 0 || (config('flash.display_errors') && view()->getShared()['errors']->count() > 0);
+        return count(session('tonning.flash.notifications', [])) > 0 || (config('flash.display_errors') && view()->getShared()['errors']->count() > 0);
     }
 
     protected function flash()

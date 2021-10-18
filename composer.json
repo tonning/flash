@@ -1,17 +1,17 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "tonning/flash",
+    "description": "Flash for Laravel",
     "keywords": [
-        ":vendor_name",
+        "tonning",
         "laravel",
-        ":package_slug"
+        "flash"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/tonning/flash",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Kristoffer Tonning",
+            "email": "tonning@gmail.com",
             "role": "Developer"
         }
     ],
@@ -30,13 +30,15 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories"
-        }
+            "Tonning\\Flash\\": "src"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests"
+            "Tonning\\Flash\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -49,10 +51,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "Tonning\\Flash\\FlashServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\SkeletonFacade"
+                "Flash": "Tonning\\Flash\\Flash"
             }
         }
     },

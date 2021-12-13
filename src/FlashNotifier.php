@@ -54,11 +54,24 @@ class FlashNotifier
         return count(session('tonning.flash.notifications', [])) > 0 || (config('flash.display_errors') && view()->getShared()['errors']->count() > 0);
     }
 
+    public function all()
+    {
+        $notifications = session('tonning.flash.notifications', collect());
+        $errors = (config('flash.display_errors') ? view()->getShared()['errors'] : []);
+
+        return $notifications->merge($errors);
+    }
+
     protected function flash()
     {
         $this->session->flash('tonning.flash.notifications', $this->messages);
 
         return $this;
+    }
+
+    public function clear()
+    {
+        session()->forget('tonning.flash.notifications');
     }
 
     public function render()

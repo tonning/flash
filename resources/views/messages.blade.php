@@ -7,7 +7,7 @@
         />
     @endif
 
-    @foreach(session('tonning.flash.notifications', []) as $level => $levelMessages)
+    @foreach(session('tonning.flash.notifications', collect()) as $level => $levelMessages)
         @foreach($levelMessages->groupBy->title as $messages)
             <x-flash::message
                 :messages="$messages"

@@ -14,19 +14,19 @@ class FlashNotifier
         $this->messages = collect();
     }
 
-    public function info(string|Message $message)
+    public function info(string|Message $message, string $title = null)
     {
-        $this->message($message, 'info');
+        $this->message($message, 'info', $title);
     }
 
-    public function success(string|Message $message)
+    public function success(string|Message $message, string $title = null)
     {
-        $this->message($message, 'success');
+        $this->message($message, 'success', $title);
     }
 
-    public function error(string|Message $message)
+    public function error(string|Message $message, string $title = null)
     {
-        $this->message($message, 'error');
+        $this->message($message, 'error', $title);
     }
 
     public function warning(string|Message $message, string $title = null)
